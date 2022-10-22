@@ -1,16 +1,16 @@
 {
   "$schema": "https://www.raycast.com/schemas/extension.json",
-  "name": "todo-list",
-  "title": "Todo List",
+  "name": "just-helper",
+  "title": "Show a list of all just commands",
   "description": "A simple todo list.",
   "icon": "icon.png",
-  "author": "thomas",
+  "author": "hari",
   "license": "MIT",
   "commands": [
     {
       "name": "index",
-      "title": "Show Todos",
-      "description": "Show a list of all todos.",
+      "title": "Just Commands",
+      "description": "Show a list of all Just Commands",
       "mode": "view"
     }
   ],
