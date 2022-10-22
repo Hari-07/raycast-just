@@ -51,9 +51,9 @@ export default function Command() {
 
   const handleDelete = useCallback(
     (index: number) => {
-      const newTodos = [...state.projects];
-      newTodos.splice(index, 1);
-      setState((previous) => ({ ...previous, todos: newTodos }));
+      const newProjects = [...state.projects];
+      newProjects.splice(index, 1);
+      setState((previous) => ({ ...previous, projects: newProjects }));
     },
     [state.projects, setState]
   );
