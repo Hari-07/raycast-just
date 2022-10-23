@@ -1,6 +1,6 @@
 import { ActionPanel, List } from "@raycast/api";
 import { Filter, Project } from "../types";
-import CreateTodoAction from "./CreateTodoAction";
+import AddProjectAction from "./AddProjectAction";
 
 function EmptyView(props: { projects: Project[]; filter: Filter; searchText: string; onCreate: (project: Project) => void }) {
   if (props.projects.length > 0) {
@@ -11,7 +11,7 @@ function EmptyView(props: { projects: Project[]; filter: Filter; searchText: str
         description={`Can't find a todo matching ${props.searchText}.\nCreate it now!`}
         actions={
           <ActionPanel>
-            <CreateTodoAction defaultTitle={props.searchText} onCreate={props.onCreate} />
+            <AddProjectAction defaultTitle={props.searchText} onCreate={props.onCreate} />
           </ActionPanel>
         }
       />
@@ -26,7 +26,7 @@ function EmptyView(props: { projects: Project[]; filter: Filter; searchText: str
           description="All todos completed - way to go! Why not create some more?"
           actions={
             <ActionPanel>
-              <CreateTodoAction defaultTitle={props.searchText} onCreate={props.onCreate} />
+              <AddProjectAction defaultTitle={props.searchText} onCreate={props.onCreate} />
             </ActionPanel>
           }
         />
@@ -50,7 +50,7 @@ function EmptyView(props: { projects: Project[]; filter: Filter; searchText: str
           description="You don't have any todos yet. Why not add some?"
           actions={
             <ActionPanel>
-              <CreateTodoAction defaultTitle={props.searchText} onCreate={props.onCreate} />
+              <AddProjectAction defaultTitle={props.searchText} onCreate={props.onCreate} />
             </ActionPanel>
           }
         />

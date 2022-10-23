@@ -2,15 +2,15 @@ import { Action, Icon } from "@raycast/api";
 import { Project } from "../types";
 import AddProjectForm from "./AddProjectForm";
 
-function CreateTodoAction(props: { defaultTitle?: string; onCreate: (project: Project) => void }) {
+function AddProjectAction(props: { defaultTitle?: string; onCreate: (project: Project) => void }) {
   return (
     <Action.Push
       icon={Icon.Plus}
-      title="Create Todo"
+      title="Add Project"
       shortcut={{ modifiers: ["cmd"], key: "n" }}
       target={<AddProjectForm defaultTitle={props.defaultTitle} onCreate={props.onCreate} />}
     />
   );
 }
 
-export default CreateTodoAction;
+export default AddProjectAction;
