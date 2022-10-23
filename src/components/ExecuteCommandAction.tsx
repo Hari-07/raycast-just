@@ -1,14 +1,14 @@
 import { Action, Icon } from "@raycast/api";
 
-function DeleteTodoAction(props: { onDelete: () => void }) {
+function ExecuteCommandAction(props: { onDelete: () => void }) {
   return (
     <Action
-      icon={Icon.Trash}
-      title="Delete Todo"
+      icon={Icon.Terminal}
+      title="Execute Command"
       shortcut={{ modifiers: ["ctrl"], key: "x" }}
       onAction={props.onDelete}
     />
   );
 }
 
-export default DeleteTodoAction;
+export default ExecuteCommandAction;
